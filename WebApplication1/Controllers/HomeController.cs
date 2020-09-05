@@ -27,6 +27,14 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+        public IActionResult Opportunities()
+        {
+            return View();
+        }
+        public IActionResult Details()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

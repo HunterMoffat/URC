@@ -1,17 +1,41 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/*Author: Hunter Moffat
+Partner: None
+Date: 9/2/2020
+Course: CS 4540, University of Utah, School of Computing
+Copyright: CS 4540 and Hunter Moffat - This work may not be copied for use in Academic Coursework.
+
+I, Hunter Moffat, certify that I wrote this code from scratch and did not copy it in part or whole from
+another source. Any references used in the completion of the assignment are cited in my README file.
+
+File Contents
+
+This is all the css I wrote for my webpage so far, I tried to make it look good
+*/
+
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
 }
-
+body {
+    background-color: mistyrose;
+}
+h1 {
+ color: firebrick;
+}
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+    width: 800px;
+}
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -20,10 +44,26 @@ a {
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #1b6ec2;
+  background-color: pink;
   border-color: #1861ac;
 }
-
+.opportunity img {
+    width: 100px;
+}
+.opportunity {
+    /* table-layout: auto;*/
+    /* max-width: 50%;*/
+    width: 800px;
+    border: 5px solid slateblue;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    background-color: plum;
+    overflow-wrap: break-word;
+}
+.td {
+    text-align:center;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
