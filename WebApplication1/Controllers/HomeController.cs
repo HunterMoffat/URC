@@ -35,18 +35,6 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult Application()
-        {
-            return View();
-        }
-        public IActionResult Logout()
-        {
-            return View();
-        }
-        public IActionResult Manage_Account()
-        {
-            return View();
-        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
