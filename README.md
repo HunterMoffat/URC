@@ -29,6 +29,7 @@ of the application page.  Each field is evenly spaced out (at least on my monito
 official website.  The usability increased drastically in my opinion because instead of one page fully implemented, I now have a website with<br/>
 links going to different pages and useful information being displayed to the user.
 <br/>
+<br/>
  List of Bootstrap components:<br/>
  Jumbotron (on homepage)<br/>
  buttons (on multiple pages)<br/>
@@ -37,7 +38,7 @@ links going to different pages and useful information being displayed to the use
  file upload thing (application page)<br/>
  text area (application page)<br/>
  selectable list (application page)<br/>
-
+<br/>
 Peers Helped:
 <br/>
 No one
