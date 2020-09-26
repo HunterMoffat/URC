@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebApplication1.Models.Opportunity>
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1 class="text-center">Opportunities</h1>
+<body class="align-content-center">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4">
+                    <div class="jumbotron">
+                        <div class="view overlay my-4">
+                            <img src="~/images/R.jpg" class="img-fluid" alt="">
+                            <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <h5 class="text-center"> @Html.DisplayFor(modelItem => item.Name)</h5>
+                        <p class="text-center" style="font-size: 14px;">Professor:  @Html.DisplayFor(modelItem => item.Professor)</p>
+                        <a class="text-center" asp-action="Details" asp-route-id="@item.OpportunityID">Details</a>
+                    </div>
+                </div>
+            }
+        </div>
+</body>
