@@ -5,80 +5,99 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+@*A Page that displays the details of a given opportunity*@
+<!--
+  Author:    Hunter Moffat
+  Partner:   None
+  Date:      9/23/2020
+  Course:    CS 4540, University of Utah, School of Computing
+  Copyright: CS 4540 and Hunter Moffat - This work may not be copied for use in Academic Coursework.
 
-<div>
-    <h4>Opportunity</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Professor)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Professor)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Mentor)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Mentor)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Begin_date)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Begin_date)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.End_date)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.End_date)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Pay)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Pay)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Filled)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Filled)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Required_skills)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Required_skills)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Search_tags)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Search_tags)
-        </dd>
-    </dl>
+  I, Hunter Moffat, certify that I wrote this code from scratch and did not copy it in part or whole from
+  another source.  Any references used in the completion of the assignment are cited in my README file.
+
+  File Contents
+
+     A new Details page that uses the database to list the details of a given opportunity and has a button to apply for the opportunity
+-->
+<h1 class="text-center">Details</h1>
+<div class="container">
+    <div class="float-left" style='width:50%;float:left'>
+        <img src="~/images/@Html.DisplayFor(model => model.Image)" style="width:500px;height:600px;" />
+    </div>
+    <div class="float-right" style='float:right;width:50%;'>
+        <div class="card">
+            <div class="card-header">
+                @Html.DisplayFor(model => model.Name)
+            </div>
+            <table class="table table-bordered" style="table-layout:auto;" border="1" width="100%">
+                <tr>
+                    <dl class="row">
+                        <dt class="col-sm-5" style="word-break:break-all;">
+                            @Html.DisplayNameFor(model => model.Professor)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Professor)
+                        </dd>
+                        <dt class="col-sm-5">
+                            @Html.DisplayNameFor(model => model.Description)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Description)
+                        </dd>
+                        <dt class="col-sm-5">
+                            @Html.DisplayNameFor(model => model.Mentor)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Mentor)
+                        </dd>
+                        <dt class="col-sm-5">
+                            Starting Date
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Begin_date)
+                        </dd>
+                        <dt class="col-sm-5">
+                            Ending Date
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.End_date)
+                        </dd>
+                        <dt class="col-sm-5">
+                            @Html.DisplayNameFor(model => model.Pay)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Pay)
+                        </dd>
+                        <dt class="col-sm-5">
+                            @Html.DisplayNameFor(model => model.Filled)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Filled)
+                        </dd>
+                        <dt class="col-sm-5">
+                            Required Skills
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Required_skills)
+                        </dd>
+                        <dt class="col-sm-5">
+                            Tags
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Search_tags)
+                        </dd>
+                    </dl>
+                </tr>
+            </table>
+            <div class="card-footer">
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="container">
+    <a type="button" style="position:center;" class="btn btn-primary" asp-area="" asp-controller="Student" asp-action="Application">Apply Now</a>
 </div>
+
+

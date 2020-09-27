@@ -32,37 +32,38 @@ h1 {
  color: firebrick;
 }
 table {
-    table-layout: fixed;
-    word-wrap: break-word;
-    width: 800px;
+    table-layout: auto;
 }
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
-.jumbotron
-{
-    position:relative;
+.jumbotron .opportunity{
+    position: relative;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: pink;
   border-color: #1861ac;
 }
-.opportunity img {
-    width: 100px;
+/*Inspiration and some code was used to design the cards from this website*/
+/* https://www.quackit.com/html/html_editors/scratchpad/?example=/css/grid/examples/cards_flexible_width_align-items_stretch */
+.card-img-top {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 300px;
 }
-.opportunity {
-    /* table-layout: auto;*/
-    /* max-width: 50%;*/
-    width: 800px;
-    border: 5px solid slateblue;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    background-color: plum;
-    overflow-wrap: break-word;
+/*This makes the card have a drop shadow that makes it look nice*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 .td {
     text-align:center;

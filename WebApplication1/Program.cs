@@ -32,7 +32,7 @@ namespace WebApplication1
                 {
                     var context = services.GetRequiredService<URC_Context>();
                     // context.Database.EnsureCreated();
-                    DbInitializer.Initialize(context);
+                    OpportunitySeeding.Initialize(context);
                 }
                 catch (Exception ex)
                 {

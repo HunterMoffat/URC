@@ -7,6 +7,9 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Data
 {
+    /*
+     * This is the URC_Context that builds the database(s)
+     */
     public class URC_Context : DbContext
     {
         public URC_Context(DbContextOptions<URC_Context> options)

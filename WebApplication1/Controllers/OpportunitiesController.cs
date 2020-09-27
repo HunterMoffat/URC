@@ -24,6 +24,10 @@ namespace WebApplication1.Controllers
         {
             return View(await _context.Opportunity.ToListAsync());
         }
+        public async Task<IActionResult> List()
+        {
+            return View(await _context.Opportunity.ToListAsync());
+        }
 
         // GET: Opportunities/Details/5
         public async Task<IActionResult> Details(int? id)
