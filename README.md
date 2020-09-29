@@ -11,8 +11,7 @@ Copyright: CS 4540 and Hunter Moffat - This work may not be copied for use in Ac
 
 Deployed URL:  ec2-35-174-136-32.compute-1.amazonaws.com<br/>
 
-Github Page:   https://github.com/HunterMoffat/WebApplication1/edit/AssingmentFour/
-<br/>
+Github Page:   https://github.com/HunterMoffat/WebApplication1/blob/AssingmentFour/
 
 Comments to Evaluators:<br/>
 
