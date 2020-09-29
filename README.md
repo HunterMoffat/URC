@@ -11,8 +11,7 @@ Copyright: CS 4540 and Hunter Moffat - This work may not be copied for use in Ac
 
 Deployed URL:  ec2-35-174-136-32.compute-1.amazonaws.com<br/>
 
-Github Page:   https://github.com/HunterMoffat/WebApplication1/blob/AssingmentFour/
-
+Github Page:   https://github.com/HunterMoffat/WebApplication1.git (ASSIGNMENT 4 BRANCH)
 Comments to Evaluators:<br/>
 
   I made a post on piazza to why this submission is late, I was given the 'ok' to turn it in today.  I was unable to figure out the image uploading, but I did try to add some images to my opportunities anyway.  I alos did not include any extra databases because I could not figure out how to get them to work with AWS.  The website link was working the last time I checked it, it is running on a micro so please notify me asap if it doesn't work.<br/>
