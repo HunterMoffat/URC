@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using URC.Areas.Identity.Data;
+using URC.Data;
 using WebApplication1.Data;
 
 namespace WebApplication1
 {
+    
     public class Program
     {
         public static void Main(string[] args)
@@ -30,9 +34,13 @@ namespace WebApplication1
 
                 try
                 {
-                    var context = services.GetRequiredService<URC_Context>();
+                    UserManager<URCUser> um = services.GetRequiredService<UserManager<URCUser>>();
+                    RoleManager<IdentityRole> rm = services.GetRequiredService<RoleManager<IdentityRole>>();
+                    var context_URC = services.GetRequiredService<URC_Context>();
+                    var context_Users = services.GetRequiredService<UsersRolesDB>();
                     // context.Database.EnsureCreated();
-                    OpportunitySeeding.Initialize(context);
+                    OpportunitySeeding.Initialize(context_URC);
+                    SeedUsersRolesDB.Initialize(context_Users, um, rm);
                 }
                 catch (Exception ex)
                 {

@@ -1,5 +1,8 @@
 ﻿@model IEnumerable<WebApplication1.Models.Opportunity>
+@using Microsoft.AspNetCore.Identity
+@using URC.Areas.Identity.Data
 
+@inject SignInManager<URCUser> SignInManager
 @{
     ViewData["Title"] = "List";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -37,6 +40,20 @@
                 </div>
                 <div class="card-body">
                     <a asp-action="Details" asp-route-id="@item.OpportunityID" class="btn btn-primary">Details</a>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.OpportunityID" class="btn btn-primary">Edit</a>
+                    }
+                    @if (User.IsInRole("Professor") && User.Identity.Name == item.Professor)
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.OpportunityID" class="btn btn-primary">Edit</a>
+                    }
+                    @if (User.IsInRole("Student"))
+                    {
+                        <a  asp-controller="Student" asp-action="Application"class="btn btn-primary">Apply Now</a>
+                        
+                    }
+
                 </div>
             </div>
         }

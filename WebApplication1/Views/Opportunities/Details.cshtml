@@ -1,5 +1,8 @@
 ﻿@model WebApplication1.Models.Opportunity
+@using Microsoft.AspNetCore.Identity
+@using URC.Areas.Identity.Data
 
+@inject SignInManager<URCUser> SignInManager
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -100,9 +103,13 @@
             </div>
         </div>
     </div>
+    @if (User.IsInRole("Student"))
+    {
+        <a asp-controller="Student" asp-action="Application" class="btn btn-primary">Apply Now</a>
+
+    }
 </div>
-<div class="container">
-    <a type="button" style="position:center;" class="btn btn-primary" asp-area="" asp-controller="Student" asp-action="Application">Apply Now</a>
-</div>
+
+
 
 
