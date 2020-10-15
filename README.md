@@ -9,7 +9,7 @@ Course:    CS 4540, University of Utah, School of Computing<br/>
 Copyright: CS 4540 and Hunter Moffat - This work may not be copied for use in Academic Coursework.<br/>
 
 
-Deployed URL:  ec2-35-174-136-32.compute-1.amazonaws.com<br/>
+Deployed URL:  https://ec2-54-205-79-90.compute-1.amazonaws.com/<br/>
 
 Github Page:   https://github.com/HunterMoffat/WebApplication1.git (ASSIGNMENT 4 BRANCH)
 Comments to Evaluators:<br/>
