@@ -10,14 +10,14 @@ using URC.Data;
 namespace URC.Migrations
 {
     [DbContext(typeof(UsersRolesDB))]
-    [Migration("20201011051510_CreateIdentitySchema")]
+    [Migration("20201015000255_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8")
+                .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 

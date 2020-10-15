@@ -38,6 +38,22 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               TA
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item">Hunter Moffat</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Opportunities" asp-action="List">List</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Opportunities" asp-action="Index">Opportunites</a>
+                                <a class="dropdown-item" href="/Opportunities/Details/4">Single Opportunity</a>
+                                <a class="dropdown-item" href="/Student/Application">Application</a>
+                                <a class="dropdown-item" href="/Opportunities/Edit/1">Edit Opportunity</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="Roles_And_Users">Role Manager</a>
+                            </div>
+                        </li>
                         @*Checks to see if the user is signed in and if they are a admin it adds the list and role manager pages to the nav bar*@
                         @if (SignInManager.IsSignedIn(User))
                         {
@@ -50,7 +66,7 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Roles_And_Users">Role Manager</a>
                                 </li>
                             }
-                            
+
                         }
 
 

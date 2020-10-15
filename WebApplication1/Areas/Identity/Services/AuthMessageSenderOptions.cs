@@ -7,7 +7,7 @@ namespace URC.Areas.Identity.Services
 {
     public class AuthMessageSenderOptions
     {
-        public string SendGridUser;
-        public string SendGridKey;
+        public string SendGridUser { get; set; }
+        public string SendGridKey { get; set; }
     }
 }
