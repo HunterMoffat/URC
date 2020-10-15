@@ -11,7 +11,7 @@ Copyright: CS 4540 and Hunter Moffat - This work may not be copied for use in Ac
 
 Deployed URL:  https://ec2-54-205-79-90.compute-1.amazonaws.com/<br/>
 
-Github Page:   https://github.com/HunterMoffat/WebApplication1.git (ASSIGNMENT 4 BRANCH)
+Github Page:   https://github.com/HunterMoffat/WebApplication1.git (ASSIGNMENT 5 BRANCH)
 Comments to Evaluators:<br/>
 
 I am turning in this assignment very late.  Unfortunately I was unable to get to this assignment until like Wednesday last week.  I had some very unexpected computer issues that occured Thursday night. My laptop overheated and quite literally exploded (the bottom of my laptop is now completely separated from the rest of the case) which is kinda of nuts given the laptop I have has great build quality.  Somehow I was able to get it working again, but now it runs very, very slowly making programming a total pain in the butt.  I am in the process of buying a new computer.  Also I was a little unsure about the single opportunities edit page.  I think this assignment was really fun once the due date passed I stopped rushing the assignment and really took my time with it. The link in the TA nav bar directs you to an opportunity edit page of an opportunity owned by a professor.  You have to be a professor or admin to view/edit it.<br/>
