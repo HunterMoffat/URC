@@ -9,25 +9,31 @@ Course:    CS 4540, University of Utah, School of Computing<br/>
 Copyright: CS 4540 and Hunter Moffat - This work may not be copied for use in Academic Coursework.<br/>
 
 
-Deployed URL:  https://ec2-54-205-79-90.compute-1.amazonaws.com/<br/>
+Deployed URL:  ec2-3-234-218-100.compute-1.amazonaws.com<br/>
 
-Github Page:   https://github.com/HunterMoffat/WebApplication1.git (ASSIGNMENT 5 BRANCH)
+Github Page:   https://github.com/HunterMoffat/WebApplication1.git (ASSIGNMENT 6 BRANCH)
 Comments to Evaluators:<br/>
 
-I am turning in this assignment very late.  Unfortunately I was unable to get to this assignment until like Wednesday last week.  I had some very unexpected computer issues that occured Thursday night. My laptop overheated and quite literally exploded (the bottom of my laptop is now completely separated from the rest of the case) which is kinda of nuts given the laptop I have has great build quality.  Somehow I was able to get it working again, but now it runs very, very slowly making programming a total pain in the butt.  I am in the process of buying a new computer.  Also I was a little unsure about the single opportunities edit page.  I think this assignment was really fun once the due date passed I stopped rushing the assignment and really took my time with it. The link in the TA nav bar directs you to an opportunity edit page of an opportunity owned by a professor.  You have to be a professor or admin to view/edit it.<br/>
+I talked to the TAs and got permission to submit this late, if you are grading this and saw my message on piazza, thank you for understanding my situation and giving me some breathing room to complete this assignment.  I hope it is not "too late". Unfortunately, I was unable to get postman working correctly, I checked Piazza for help on this but I could not find anything, it may have to do with how my "find" button works.  On top of that, I named my model "Application" instead of "Student" this was because I got very confused because we were supposed to create student applications but the assignment said students, it just made more sense in my mind to name it applications.  Also when you test the application link for each student under the TA drop down make sure you log into the student account first before trying to view the application.  This has to do with how I implemented the project. <br/>
 
 Assignment Specific Write-up:<br/>
 
-Authorization and Authentication: <br/>
-I noticed a bunch of really cool things while developing about authorization and authentication.  I found the process of "walling off" pages to be very intuitive and suprisingly easy to implement.  I also realized how awesome dependency injection is, the signinManager and UserManager are so powerful and if I had not taken so long to finish this assignment, I would have made so the admin's view of the website was completely different from the rest, sort of like a 'dark mode' which could be really cool in my opinion.  I also attempted to brake my website by trying to figure out ways that a student can view an admin only page.  I tried for maybe an hour and found some bugs, but ultimately couldn't brake my website.
+Data Validation:<br/>
+1. I validate the Application's UID so that it is in the correct format.
+2. I validate the Application's GPA so that it is in between 0 and 4
+3. I validate the Application's statement is not longer than 500 characters
+4-5. I validate that the Application's DateCreated and TimeModified variables are automatically generated when the application is created or modified.
+6. I validate that the Application's version number is not scaffolded.
+
+From my understanding, Validation information means that before an entry is added to the database the front end checks each field containing a validation tag before submitting the entry to the back end to be added.  If one of the validation tags is violated, the front end will require the user to fix the fields before sending the entry to the back end to be added to the database. These tags can also tell the back end to auto generate feilds of that are not required from the front end and tell asp not to scaffold certain fields.  
 <br/>
 Above and Beyond:<br/>
-So I did not do anything crazy that is beyond the assignment specs, but I did add role unique buttons to the Opportunities overview page and specific opportunities pages.  So when you are an admin or professor when viewing the overview page ther will be buttons to edit (if its the professor's opportunity) next to the details page.  I also added buttons that behave exactly the same way on each opportunities details page.  For students viewing the overview or detail pages, I added an "apply" button which is not visible to the other roles.  The apply button directs the student to the application forms page from assignment 2.
+So I did not do anything crazy that is beyond the assignment specs, I added a toggle switch for the user to change if they are actively searching for an opportunity or not because I thought it was clearer than adding a button.
 <br/>
 Improvements:<br/>
-I cleaned up my nav bar so it no longer looks like a 3 year old did it.  The login button is always going to be on the right side of the page. I don't think I made any other improvements.
+I added a cool bootstrap table using jquery that makes the tables a lot nicer to look at.
 <br/>Feedback:<br/>
- One thing I wish was covered more in class is the set up.  I ended up rewatching the videos countless times to see if I was missing anything.  The set up took the most time for this project specifically the datatables.  I spent hours trying to figure out why the table wasn't working only to find out that I was importing jquery in the layout and once again in my role manager. This assignment took me about 12 hours + to complete, but a good 7 hours of that was setting things up properly.  <br/>
+This assignment was fun, although I am turning it in a little late I feel bad because I did not really get a solid grasp on postman from the lectures and I wish I attended office hours to set it up properly, but that is on me.  I still feel a little unsure about AJAX and Java Script it took me way longer than I would like to admit to implement the search functionality and I could not for the life of me figure out how to get it working in postman making me think I did the find button incorrectly, but it works as the assignment intended. <br/>
 Peers Helped:
 <br/>
 No one
@@ -37,7 +43,7 @@ Peers Consulted:<br/>
 No one<br/>
 
 Acknowledgements:<br/>
-Honestly for this assignment, I didn't really use anything I found on the internet, I did have a really messy site.js file with a bunch of code to test datatables and ajax.  Turns out all the code I copied from stack overflow was useless and all I really had to do was use the $.post() function.  One thing I did copy and barely change was the EmailSender from that microsoft tutorial, but I think thats what was expected.  The most useful thing for me was using the auto generated code from the last assignment as a reference.   <br/>
+I used some code for tables which are all credited in my css files.  <br/>
 
    
 References:<br/>
