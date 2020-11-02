@@ -10,7 +10,7 @@ using URC.Data;
 namespace URC.Migrations
 {
     [DbContext(typeof(UsersRolesDB))]
-    [Migration("20201015000255_CreateIdentitySchema")]
+    [Migration("20201102005622_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

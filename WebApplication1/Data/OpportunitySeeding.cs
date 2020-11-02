@@ -1,23 +1,25 @@
 ﻿using WebApplication1.Models;
 using System;
 using System.Linq;
+using Microsoft.EntityFrameworkCore.Internal;
+using URC.Models;
 /**
- * Author:    Richard Hunter Moffat
- * Partner:   None
- * Date:      9/22/2020
- * Course:    CS 4540, University of Utah, School of Computing
- * Copyright: CS 4540 and Richard Hunter Moffat
- *
- * I, Richard Hunter Moffat, certify that I wrote this code from scratch and did 
- * not copy it in part or whole from another source.  Any references used 
- * in the completion of the assignment are cited in my README file and in
- * the appropriate method header.
- *
- * File Contents
- *
- * This class seeds the Opportunities database with 8 opportunities
- *         
- */
+* Author:    Richard Hunter Moffat
+* Partner:   None
+* Date:      9/22/2020
+* Course:    CS 4540, University of Utah, School of Computing
+* Copyright: CS 4540 and Richard Hunter Moffat
+*
+* I, Richard Hunter Moffat, certify that I wrote this code from scratch and did 
+* not copy it in part or whole from another source.  Any references used 
+* in the completion of the assignment are cited in my README file and in
+* the appropriate method header.
+*
+* File Contents
+*
+* This class seeds the Opportunities database with 8 opportunities
+*         
+*/
 namespace WebApplication1.Data
 {   
     /*
@@ -27,18 +29,37 @@ namespace WebApplication1.Data
     public static class OpportunitySeeding
     {
         /**
-         * This method seeds that opportunities database with 8 opportunities
+         * This method seeds that opportunities database with 8 opportunities and 2 applications
          **/
         public static void Initialize(URC_Context context)
         {
             context.Database.EnsureCreated();
 
             // Look for any students.
-            if (context.Opportunity.Any())
+            if (context.Opportunity.Any() && context.Application.Any())
             {
                 return;   // DB has been seeded
             }
-            
+            // seeding the applications 
+            var applications = new Application[]
+                {
+                    new Application{UID ="u0000001", GPA = (float) 2.1, Applying = true, Email = "u0000001@utah.edu", Statement = "This is a dummy application", Interests = "skiing, hiking, drawing",
+                    CompletedCourses = "CS2420, CS3100, CS1410", DegreePlan="CS", Skills="Programming, learning, C#, Visual Studio", Resume = "resume1.txt",
+                   DateCreated= new DateTime(2020, 3, 1, 7, 0, 0), TimeModified = new DateTime(2020, 3, 1, 7, 0, 0), GraduationDate = new DateTime(2021, 5, 5, 7, 0, 0)},
+                    new Application{UID ="u0000002", GPA = (float) 3.0, Applying = true, Email = "u0000002@utah.edu", Statement = "This is a dummy application", Interests = "Lifting, baseball, food",
+                    CompletedCourses = "ART1010, ECE1000, ECE2000", DegreePlan="ECE", Skills="Electronics, ASP", Resume = "resume2.txt",
+                       DateCreated= new DateTime(2020, 3, 1, 7, 0, 0), TimeModified = new DateTime(2020, 3, 1, 7, 0, 0), GraduationDate = new DateTime(2022, 5, 5, 7, 0, 0) },
+                    new Application{UID ="u0000004", GPA = (float) 3.41, Applying = true, Email = "u0000004@utah.edu", Statement = "This is a dummy application, that is way longer than it should be and should be cut off when the summary is created haha cool.", Interests = "Lifting, baseball, food",
+                    CompletedCourses = "ART1010, CS4230, CS1410", DegreePlan="ECE", Skills="Ruby, Java, Netbeans", Resume = "resume4.txt",
+                       DateCreated= new DateTime(2008, 3, 1, 7, 0, 0), TimeModified = new DateTime(2020, 5, 1, 7, 0, 0), GraduationDate = new DateTime(2021, 5, 5, 7, 0, 0) }
+                };
+
+            foreach (Application o in applications)
+            {
+                Console.WriteLine("Adding Applications to Database");
+                context.Application.Add(o);
+            }
+
             var opportunities = new Opportunity[]
             {
                

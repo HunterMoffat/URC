@@ -14,6 +14,47 @@ File Contents
 
 This is all the css I wrote for my webpage so far, I tried to make it look good
 */
+/*FROM:https://stackoverflow.com/questions/28508435/how-to-limit-the-characters-displayed-in-a-td-entry-in-angularjsS */
+.ellipsis {
+    max-width: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/*Code for search bar from: https://codepen.io/huange/pen/rbqsD */
+
+.input-group.md-form.form-sm.form-1 input {
+    border: 1px solid #bdbdbd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.input-group.md-form.form-sm.form-2 input {
+    border: 1px solid #bdbdbd;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+    .input-group.md-form.form-sm.form-2 input.red-border {
+        border: 1px solid #ef9a9a;
+    }
+
+    .input-group.md-form.form-sm.form-2 input.lime-border {
+        border: 1px solid #cddc39;
+    }
+
+    .input-group.md-form.form-sm.form-2 input.amber-border {
+        border: 1px solid #ffca28;
+    }
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* Table styling code came from: https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l, Just thought it looked way better than what I can do */
 .styled-table {
     border-collapse: collapse;

@@ -9,11 +9,14 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    public class StudentController : Controller
+    /**
+     * [OUT DATED PLEASE SEE APPLICATIONSCONTROLLER] 
+     */
+    public class StudentsController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        public StudentController(ILogger<HomeController> logger)
+        public StudentsController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }

@@ -42,6 +42,10 @@ namespace URC.Areas.Identity.Data
                 um.CreateAsync(new URCUser { UserName = "professor_mary@utah.edu", Email = "professor_mary@utah.edu", EmailConfirmed = true }, pass).Wait();
                 um.CreateAsync(new URCUser { UserName = "u0000000@utah.edu", Email = "u0000000@utah.edu", EmailConfirmed = true }, pass).Wait();
                 um.CreateAsync(new URCUser { UserName = "u1234567@utah.edu", Email = "u1234567@utah.edu", EmailConfirmed = true }, pass).Wait();
+                um.CreateAsync(new URCUser { UserName = "u0000001@utah.edu", Email = "u0000001@utah.edu", EmailConfirmed = true }, pass).Wait();
+                um.CreateAsync(new URCUser { UserName = "u0000002@utah.edu", Email = "u0000002@utah.edu", EmailConfirmed = true }, pass).Wait();
+                um.CreateAsync(new URCUser { UserName = "u0000003@utah.edu", Email = "u0000003@utah.edu", EmailConfirmed = true }, pass).Wait();
+                um.CreateAsync(new URCUser { UserName = "u0000004@utah.edu", Email = "u0000004@utah.edu", EmailConfirmed = true }, pass).Wait();
 
             }
             catch(Exception e)
