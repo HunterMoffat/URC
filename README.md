@@ -1,7 +1,5 @@
 Author:   Hunter Moffat<br/>
 
-Partner:   NONE<br/>
-
 Date:      9/2/2020<br/>
 
 Course:    CS 4540, University of Utah, School of Computing<br/>
